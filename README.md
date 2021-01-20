@@ -1,6 +1,6 @@
 # Clickstream Sequence Learning
 
-In this project, we will predict the outcomes of online browsing sessions through session-level features or sequence of page visits to predict if the next sequence will be a purchase or not.
+In this project, we will predict the outcomes of online browsing sessions through session-level features and sequence of page visits to predict if the next sequence will be a purchase or not.
 
 #### RNN
 ![rnn_image_wiki](https://github.com/chrispmaag/clickstream_sequence_learning/blob/main/images/rnn_image_wiki.png)
@@ -56,6 +56,7 @@ Finally, we look at using the feature-based dataset.
 | Feature-based | GRU           | 0.85 |
 | Feature-based | LSTM          | 0.98 |
 
+#### LSTM Results
 ![lstm_results_feat_charts](https://github.com/chrispmaag/clickstream_sequence_learning/blob/main/images/lstm_results_feat_charts.jpg)
 
 In this case, feature-level data offers a massive boost in our performance metrics over the sequence-level data. Our best performing LSTM using feature-level data had an F1 score of 0.98 and recall of 0.96. This significantly outperforms the best model trained on sequence data, a simple RNN which achieved an F1 score of 0.39.
