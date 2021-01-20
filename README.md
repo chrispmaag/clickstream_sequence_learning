@@ -2,10 +2,13 @@
 
 In this project, we will predict the outcomes of online browsing sessions through session-level features or sequence of page visits to predict if the next sequence will be a purchase or not.
 
+#### RNN
 ![rnn_image_wiki](https://github.com/chrispmaag/clickstream_sequence_learning/blob/main/images/rnn_image_wiki.png)
 
+#### GRU
 ![gru_gates_wiki](https://github.com/chrispmaag/clickstream_sequence_learning/blob/main/images/gru_gates_wiki.png)
 
+#### LSTM
 ![lstm_gates_wiki](https://github.com/chrispmaag/clickstream_sequence_learning/blob/main/images/lstm_gates_wiki.png)
 
 We'll compare the results we get from using simple recurrent neural networks (RNNs), gated recurrent units (GRUs), and long short-term memory (LSTMs). 
@@ -21,14 +24,11 @@ Download the `clickstream_sequence_learning.ipynb` file and run it. In order to 
 
 ## Results
 
-After transforming the clickstream data in a sequence up to ten events long, 
+After transforming the clickstream data in a sequence up to ten events long, we can fit an RNN, GRU, and LSTM to predict sessions that have a purchase in them.
 
 ![sequence_10](https://github.com/chrispmaag/clickstream_sequence_learning/blob/main/images/sequence_10.jpg)
 
-we can fit an RNN, GRU, and LSTM to predict sessions that have a purchase in them.
-
 The table below summarizes the results of the three models on the short sequences data.
-
 
 | Data Type     | Model         | F1 Score|
 |:------------- |:-------------:| -----:|
@@ -37,7 +37,6 @@ The table below summarizes the results of the three models on the short sequence
 | Sequence <= 10| LSTM          | 0.37 |
 
 For this smaller sequence version of the data we would prefer to use the simpler RNN model  because it achieved the same F1 score has the GRU model while having approximately three times fewer trainable parameters (12K vs 36K).
-
 
 Next, we repeated the process, but expanded the sequence length to include up to 300 events.
 
@@ -57,5 +56,6 @@ Finally, we look at using the feature-based dataset.
 | Feature-based | GRU           | 0.85 |
 | Feature-based | LSTM          | 0.98 |
 
+![lstm_results_feat_charts](https://github.com/chrispmaag/clickstream_sequence_learning/blob/main/images/lstm_results_feat_charts.jpg)
 
 In this case, feature-level data offers a massive boost in our performance metrics over the sequence-level data. Our best performing LSTM using feature-level data had an F1 score of 0.98 and recall of 0.96. This significantly outperforms the best model trained on sequence data, a simple RNN which achieved an F1 score of 0.39.
