@@ -2,11 +2,11 @@
 
 In this project, we will predict the outcomes of online browsing sessions through session-level features or sequence of page visits to predict if the next sequence will be a purchase or not.
 
-![rnn_image_wiki](https://github.com/chrispmaag/clickstream_sequence_learning/blob/main/images/rnn_image_wiki.jpg)
+![rnn_image_wiki](https://github.com/chrispmaag/clickstream_sequence_learning/blob/main/images/rnn_image_wiki.png)
 
-![gru_gates_wiki](https://github.com/chrispmaag/clickstream_sequence_learning/blob/main/images/gru_gates_wiki.jpg)
+![gru_gates_wiki](https://github.com/chrispmaag/clickstream_sequence_learning/blob/main/images/gru_gates_wiki.png)
 
-![lstm_gates_wiki](https://github.com/chrispmaag/clickstream_sequence_learning/blob/main/images/lstm_gates_wiki.jpg)
+![lstm_gates_wiki](https://github.com/chrispmaag/clickstream_sequence_learning/blob/main/images/lstm_gates_wiki.png)
 
 We'll compare the results we get from using simple recurrent neural networks (RNNs), gated recurrent units (GRUs), and long short-term memory (LSTMs). 
 
@@ -17,7 +17,7 @@ We'll compare the results we get from using simple recurrent neural networks (RN
 Two pickle files contain the different types of data. One pickle file, `shopping.pkl` has the timestamped session data. The other, `Session_features.pkl`, contains feature-level session data. 
 
 ## Get the Code
-Download the clickstream_sequence_learning.ipynb file and run it. In order to run through the notebook, you'll have to provide your own pickle files with clickstream data, as this data set isn't publicly available.
+Download the `clickstream_sequence_learning.ipynb` file and run it. In order to run through the notebook, you'll have to provide your own pickle files with clickstream data, as this data set isn't publicly available.
 
 ## Results
 
